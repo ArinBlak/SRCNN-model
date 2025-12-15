@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware 
 import tensorflow as tf
 import numpy as np
 from PIL import Image
