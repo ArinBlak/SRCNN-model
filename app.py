@@ -7,6 +7,13 @@ import io
 
 app = FastAPI(title="SRCNN Image Enhancement API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In real production, replace "*" with your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # -----------------------------
 # Load SRCNN model once at startup
 # -----------------------------
